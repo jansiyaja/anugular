@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-
-  "dev": "ng run hello-world:serve-ssr",
-  "build:ssr": "ng build && ng run hello-world:server",
-  "serve:ssr": "node dist/hello-world/server/server.mjs",
+    "dev": "ng run hello-world:serve-ssr",
+    "build:ssr": "ng build && ng run hello-world:server",
+    "serve:ssr": "node dist/hello-world/server/server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:hello-world": "node dist/hello-world/server/server.mjs"
@@ -31,6 +30,7 @@
     "@angular/platform-server": "^20.0.0",
     "@angular/router": "^20.0.0",
     "@angular/ssr": "^20.0.5",
+    "dotenv": "^17.1.0",
     "express": "^5.1.0",
     "mysql2": "^3.14.1",
     "rxjs": "~7.8.0",

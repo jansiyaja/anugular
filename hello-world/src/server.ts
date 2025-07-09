@@ -7,24 +7,24 @@ import {
 import express from 'express';
 import { join } from 'node:path';
 import mysql from 'mysql2/promise';
-
+ import dotenv from 'dotenv';
+dotenv.config();
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
 app.use(express.json()); // ✅ Parse incoming JSON
 
-// ✅ Setup MySQL connection pool
+
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'Root@123', // Change to your real MySQL password
-  database: 'auth',
+  host: process.env['DB_HOST'],
+  user: process.env['DB_USER'],
+  password: process.env['DB_PASSWORD'],
+  database: process.env['DB_NAME'],
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
 });
-
 // ✅ Login API using stored procedure (LoginUser)
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
