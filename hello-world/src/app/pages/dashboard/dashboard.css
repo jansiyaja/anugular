@@ -1,0 +1,87 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.create-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  cursor: pointer;
+  border: 2px dashed #ccc;
+  text-align: center;
+}
+
+.create-card .plus-icon {
+  font-size: 3rem;
+  color: #555;
+}
+
+.create-form input {
+  width: 50%;
+  margin: 0.5rem 0;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.user-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.user-card p {
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s ease-in-out;
+}
+
+button.add {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button.cancel {
+  background-color: #ccc;
+}
+
+button.edit {
+  background-color: #007bff;
+  color: white;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+}
